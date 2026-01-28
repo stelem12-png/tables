@@ -18,4 +18,5 @@ app.get("/teacher/:classe", (req, res) => {
     res.json(data[req.params.classe] || {});
 });
 
-app.listen(3000, () => console.log("Serveur lancé"));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log("Serveur lancé sur le port " + PORT));
